@@ -7,7 +7,7 @@ const RestaurantById = () => {
 
   const fetchRestaurantById = async () => {
     try {
-      const response = await fetch(`/api/restaurant/${restaurantId}`);
+      const response = await fetch(`https://foodfinder-backend-stzh.onrender.com/api/restaurant/${restaurantId}`);
       const data = await response.json();
       setSingleRestaurant(data);
     } catch (err) {
