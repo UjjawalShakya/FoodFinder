@@ -12,7 +12,7 @@ const SearchNearby = () => {
 
   const handleSearch = async () => {
     try {
-      const response = await fetch(`/api/restaurants/near?lat=${latitude}&lng=${longitude}&radius=${radius}`);
+      const response = await fetch(`https://foodfinder-backend-stzh.onrender.com/api/restaurants/near?lat=${latitude}&lng=${longitude}&radius=${radius}`);
       const data = await response.json();
       setRestaurants(data);
     } catch (err) {
