@@ -2,10 +2,20 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const geolib=require('geolib');
+const cors = require("cors");
 const restaurantRoutes = require('./routes/restaurantRoutes.js'); // Ensure this path is correct
 
 const app = express();
 app.use(bodyParser.json());
+
+const corsOptions = {
+  origin: "https://foodfinder-frontend.onrender.com",
+  "Content-Type": "Authorization",
+  credentials: true,
+  optionSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 const password = encodeURIComponent("@Shakya123");
 // const cluster = "cluster0.06bk8.mongodb.net";
 // const dbName = "restaurants";
