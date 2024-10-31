@@ -12,7 +12,7 @@ const AllRestaurants = () => {
 
   const fetchRestaurants = async () => {
     try {
-      const response = await fetch(`/api/restaurants?page=${page}&limit=${limit}`);
+      const response = await fetch(`https://foodfinder-backend-stzh.onrender.com/api/restaurants?page=${page}&limit=${limit}`);
       const data = await response.json();
       setRestaurants(data);
     } catch (err) {
