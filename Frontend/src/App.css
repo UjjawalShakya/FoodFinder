@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+body {
+  padding-top: 60px; /* This should match the height of your navbar */
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto; /* Title on the left, search section on the right */
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 2.4rem; /* Increase font size for better prominence */
+  font-weight: 700;
+  color: #34495e; /* Darker shade of blue-gray */
+  margin: 0; /* Remove default margin */
+  text-transform: uppercase; /* Make title uppercase */
+  letter-spacing: 1px; /* Add letter spacing for better readability */
+  padding-bottom: 10px; /* Add space below the text */
+}
+
+.id-search-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align search section to the right */
+}
+
+.search-section {
+  background: linear-gradient(to right, #ffffff, #f9f9f9); /* Subtle gradient */
+  border-radius: 50px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly more pronounced shadow */
+}
+
+.input-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.input, .button {
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: 1px solid #bdc3c7;
+  font-size: 1rem;
+}
+
+.input {
+  flex: 1;
+  min-width: 50px;
+}
+
+.button {
+  background-color: #3498db; /* Vibrant blue */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.button.loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.slider {
+  flex: 1;
+}
+
+.slider-value {
+  min-width: 60px;
+  text-align: center;
+}
+
+.error {
+  color: #e74c3c;
+  font-weight: 600;
+  text-align: center;
+}
+
+.all-restaurants-section {
+  margin-top: 50px;
+}
+
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.restaurant-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.restaurant-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.restaurant-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50; /* Slightly lighter shade */
+  margin-bottom: 5px;
+}
+
+.single-restaurant {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.single-restaurant img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.stars {
+  color: #f39c12;
+  letter-spacing: 2px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 8px; /* Space between buttons */
+}
+
+.pagination-button {
+  padding: 6px 12px; /* Smaller padding for compact buttons */
+  margin: 0 4px; /* Reduced margin for closer buttons */
+  background-color: #3498db; /* Matching button color */
+  color: white;
+  border: none;
+  border-radius: 50%; /* Circular buttons */
+  cursor: pointer;
+  font-size: 12px; /* Smaller font size for compact buttons */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px; /* Fixed width and height for consistency */
+  height: 32px;
+}
+
+.pagination-button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+  transform: scale(1.1); /* Slightly larger scale effect on hover */
+}
+
+.pagination-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.pagination-info {
+  font-size: 14px;
+  color: #34495e; /* Matching title color */
+  margin-left: 10px; /* Adds space between buttons and info */
+  font-weight: 600; /* Slightly bolder for emphasis */
+}
+
+.page-details {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-top: 5px; /* Space below the buttons */
+  text-align: center;
+}
+
+.restaurant-card.clickable {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.restaurant-card.clickable:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #f8f9fa;
+}
+
+@media (max-width: 1024px) {
+  .restaurant-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .restaurant-grid {
+    grid-template-columns: 1fr;
+  }
+}
