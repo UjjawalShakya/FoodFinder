@@ -14,7 +14,7 @@ const SearchNearby = () => {
   const [gettingLocation, setGettingLocation] = useState(false);
   const navigate = useNavigate();
 
-  const radiusOptions = [1, 2, 3, 5, 10, 15, 20, 25, 30, 40, 50,500];
+  const radiusOptions = [1, 2, 3, 5, 10, 15, 20, 25, 30, 40, 50, 500];
 
   // Get user's current location
   const getCurrentLocation = () => {

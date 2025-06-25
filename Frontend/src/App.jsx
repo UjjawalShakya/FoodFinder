@@ -11,8 +11,8 @@ import './App.css';
 const App = () => {
   return (
     <Router>
+      <Navbar />
       <div className="container">
-        <Navbar />
         <Routes>
           <Route path="/" element={<AllRestaurants />} />
           <Route path="/restaurant-by-id" element={<RestaurantById />} />

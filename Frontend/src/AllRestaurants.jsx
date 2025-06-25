@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import './AllRestaurants.css'; // Add your styles here
 
 const AllRestaurants = () => {
   const [restaurants, setRestaurants] = useState([]);

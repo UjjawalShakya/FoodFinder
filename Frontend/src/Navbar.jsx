@@ -61,18 +61,13 @@ const Navbar = () => {
     }
   };
 
-  const getConfidenceClass = (confidence) => {
-    if (confidence?.toLowerCase().includes('high')) return 'High';
-    if (confidence?.toLowerCase().includes('medium')) return 'Medium';
-    return 'Low';
-  };
-
   return (
     <div>
       <nav className="navbar">
         <div className="navbar-container">
           <div className="navbar-brand">
-            <h2>🍽️ Zomato</h2>
+            {/* <h2>🍽️ Zomato</h2> */}
+            <h2> Zomato </h2>
           </div>
           <ul className="navbar-menu">
             <li><a href="/">Home</a></li>
@@ -136,32 +131,6 @@ const Navbar = () => {
               <h3>🥘 Identified Cuisine</h3>
               <p className="cuisine-result">{analysisResult.cuisine || 'Unable to identify'}</p>
             </div>
-
-            {analysisResult.foodItems && (
-              <div className="analysis-section">
-                <h3>🍽️ Identified Dishes</h3>
-                <div style={{ 
-                  background: 'white', 
-                  padding: '12px 16px', 
-                  borderRadius: '8px',
-                  border: '2px solid #e2e8f0'
-                }}>
-                  <p style={{ margin: 0, color: '#475569', lineHeight: '1.6' }}>
-                    {analysisResult.foodItems}
-                  </p>
-                </div>
-              </div>
-            )}
-
-            {/* <div className="analysis-section">
-              <h3>🎯 Confidence Level</h3>
-              <p 
-                className="confidence-result" 
-                data-confidence={getConfidenceClass(analysisResult.confidence)}
-              >
-                {analysisResult.confidence || 'Medium'}
-              </p>
-            </div> */}
 
             <div className="modal-actions">
               <button 

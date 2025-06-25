@@ -1,7 +1,7 @@
 // Frontend/src/RestaurantsByCuisine.jsx
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-// import './RestaurantsByCuisine.css';
+import './RestaurantsByCuisine.css';
 
 const RestaurantsByCuisine = () => {
   const { cuisine } = useParams();
