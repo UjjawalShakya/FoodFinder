@@ -10,7 +10,7 @@ const app = express();
 app.use(bodyParser.json());
 
 const corsOptions = {
-  origin: "*",
+  origin: "https://food-finder-sandy.vercel.app/",
   credentials: true
 };
 
