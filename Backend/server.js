@@ -9,11 +9,14 @@ const restaurantRoutes = require('./routes/restaurantRoutes.js');
 const app = express();
 app.use(bodyParser.json());
 
-// const corsOptions = {
-//   origin: "*"
-// };
+const corsOptions = {
+  origin: "https://food-finder-frontend-afuz.onrender.com/",
+  "Content-Type": "Authorization",
+  credentials: true,
+  optionSuccessStatus: 200,
+};
 
-app.use(cors());
+app.use(cors(corsOptions));
 
 const password = encodeURIComponent("@Shakya123");
 
