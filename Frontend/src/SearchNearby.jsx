@@ -49,7 +49,7 @@ const SearchNearby = () => {
     setSearched(false);
 
     try {
-      const response = await fetch(`https://food-finder-dwtt.onrender.com/api/restaurants/near?lat=${latitude}&lng=${longitude}&radius=${radius}`);
+      const response = await fetch(`https://food-finder-xv2a.onrender.com/api/restaurants/near?lat=${latitude}&lng=${longitude}&radius=${radius}`);
       const data = await response.json();
       
       if (response.ok && data.success) {

@@ -22,7 +22,7 @@ const RestaurantsByCuisine = () => {
       setLoading(true);
       setError(null);
       
-      const response = await fetch(`https://food-finder-dwtt.onrender.com/api/restaurants/cuisine/${encodeURIComponent(cuisine)}?page=${page}&limit=${limit}`);
+      const response = await fetch(`https://food-finder-xv2a.onrender.com/api/restaurants/cuisine/${encodeURIComponent(cuisine)}?page=${page}&limit=${limit}`);
       const data = await response.json();
       
       if (!response.ok) {
