@@ -8,6 +8,7 @@ const RestaurantDetails = () => {
   const [restaurant, setRestaurant] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const API_BASE_URL = 'https://food-finder-xv2a.onrender.com/api';
 
   useEffect(() => {
     fetchRestaurantDetails();
@@ -16,7 +17,7 @@ const RestaurantDetails = () => {
   const fetchRestaurantDetails = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`https://food-finder-xv2a.onrender.com/api/restaurant/${id}`);
+      const response = await fetch(`${API_BASE_URL}/restaurant/${id}`);
       if (!response.ok) {
         throw new Error('Restaurant not found');
       }

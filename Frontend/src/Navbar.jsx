@@ -8,6 +8,7 @@ const Navbar = () => {
   const [analysisResult, setAnalysisResult] = useState(null);
   const [uploadedImage, setUploadedImage] = useState(null);
   const navigate = useNavigate();
+  const API_BASE_URL = 'https://food-finder-xv2a.onrender.com/api';
 
   const handlePhotoUpload = async (event) => {
     const file = event.target.files[0];
@@ -22,7 +23,7 @@ const Navbar = () => {
     formData.append('image', file);
 
     try {
-      const response = await fetch('https://food-finder-xv2a.onrender.com/api/analyze-food', {
+      const response = await fetch(`${API_BASE_URL}/analyze-food`, {
         method: 'POST',
         body: formData,
       });

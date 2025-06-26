@@ -7,7 +7,7 @@ const AllRestaurants = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
-
+  const API_BASE_URL = 'https://food-finder-xv2a.onrender.com/api';
   const limit = 12;
 
   useEffect(() => {
@@ -18,7 +18,7 @@ const AllRestaurants = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`https://food-finder-xv2a.onrender.com/api/restaurants?page=${page}&limit=${limit}`);
+      const response = await fetch(`${API_BASE_URL}/restaurants?page=${page}&limit=${limit}`);
       
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);

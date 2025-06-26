@@ -12,6 +12,7 @@ const RestaurantsByCuisine = () => {
   const [page, setPage] = useState(1);
   const [pagination, setPagination] = useState(null);
   const limit = 12;
+  const API_BASE_URL = 'https://food-finder-xv2a.onrender.com/api';
 
   useEffect(() => {
     fetchRestaurantsByCuisine();
@@ -22,7 +23,7 @@ const RestaurantsByCuisine = () => {
       setLoading(true);
       setError(null);
       
-      const response = await fetch(`https://food-finder-xv2a.onrender.com/api/restaurants/cuisine/${encodeURIComponent(cuisine)}?page=${page}&limit=${limit}`);
+      const response = await fetch(`${API_BASE_URL}/restaurants/cuisine/${encodeURIComponent(cuisine)}?page=${page}&limit=${limit}`);
       const data = await response.json();
       
       if (!response.ok) {

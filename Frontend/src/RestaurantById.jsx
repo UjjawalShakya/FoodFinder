@@ -9,6 +9,7 @@ const RestaurantById = () => {
   const [error, setError] = useState(null);
   const [searched, setSearched] = useState(false);
   const navigate = useNavigate();
+  const API_BASE_URL = 'https://food-finder-xv2a.onrender.com/api';
 
   const fetchRestaurantById = async () => {
     if (!restaurantId.trim()) {
@@ -22,7 +23,7 @@ const RestaurantById = () => {
     setSearched(false);
 
     try {
-      const response = await fetch(`https://food-finder-xv2a.onrender.com/api/restaurant/${restaurantId}`);
+      const response = await fetch(`${API_BASE_URL}/restaurant/${restaurantId}`);
       
       if (response.status === 404) {
         setError('No restaurant found with this ID');

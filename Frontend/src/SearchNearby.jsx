@@ -13,6 +13,7 @@ const SearchNearby = () => {
   const [searched, setSearched] = useState(false);
   const [gettingLocation, setGettingLocation] = useState(false);
   const navigate = useNavigate();
+  const API_BASE_URL = 'https://food-finder-xv2a.onrender.com/api';
 
   const radiusOptions = [1, 2, 3, 5, 10, 15, 20, 25, 30, 40, 50, 500];
 
@@ -49,7 +50,7 @@ const SearchNearby = () => {
     setSearched(false);
 
     try {
-      const response = await fetch(`https://food-finder-xv2a.onrender.com/api/restaurants/near?lat=${latitude}&lng=${longitude}&radius=${radius}`);
+      const response = await fetch(`${API_BASE_URL}/restaurants/near?lat=${latitude}&lng=${longitude}&radius=${radius}`);
       const data = await response.json();
       
       if (response.ok && data.success) {
