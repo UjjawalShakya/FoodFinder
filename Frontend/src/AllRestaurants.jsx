@@ -18,7 +18,7 @@ const AllRestaurants = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`/api/restaurants?page=${page}&limit=${limit}`);
+      const response = await fetch(`https://food-finder-dwtt.onrender.com/api/restaurants?page=${page}&limit=${limit}`);
       
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);

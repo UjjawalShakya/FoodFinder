@@ -10,7 +10,7 @@ const app = express();
 app.use(bodyParser.json());
 
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: "https://food-finder-dwtt.onrender.com",
   "Content-Type": "Authorization",
   credentials: true,
   optionSuccessStatus: 200,

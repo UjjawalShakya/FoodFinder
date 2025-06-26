@@ -16,7 +16,7 @@ const RestaurantDetails = () => {
   const fetchRestaurantDetails = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`/api/restaurant/${id}`);
+      const response = await fetch(`https://food-finder-dwtt.onrender.com/api/restaurant/${id}`);
       if (!response.ok) {
         throw new Error('Restaurant not found');
       }

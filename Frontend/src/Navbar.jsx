@@ -1,4 +1,3 @@
-// Frontend/src/Navbar.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Navbar.css';
@@ -23,7 +22,7 @@ const Navbar = () => {
     formData.append('image', file);
 
     try {
-      const response = await fetch('http://localhost:3000/api/analyze-food', {
+      const response = await fetch('https://food-finder-dwtt.onrender.com/api/analyze-food', {
         method: 'POST',
         body: formData,
       });

@@ -22,7 +22,7 @@ const RestaurantById = () => {
     setSearched(false);
 
     try {
-      const response = await fetch(`/api/restaurant/${restaurantId}`);
+      const response = await fetch(`https://food-finder-dwtt.onrender.com/api/restaurant/${restaurantId}`);
       
       if (response.status === 404) {
         setError('No restaurant found with this ID');
