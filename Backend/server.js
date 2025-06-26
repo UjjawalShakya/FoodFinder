@@ -10,10 +10,7 @@ const app = express();
 app.use(bodyParser.json());
 
 const corsOptions = {
-  origin: "https://food-finder-frontend-afuz.onrender.com/",
-  "Content-Type": "Authorization",
-  credentials: true,
-  optionSuccessStatus: 200,
+  origin: "https://food-finder-frontend-afuz.onrender.com/"
 };
 
 app.use(cors(corsOptions));
