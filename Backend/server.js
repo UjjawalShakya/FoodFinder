@@ -9,14 +9,11 @@ const restaurantRoutes = require('./routes/restaurantRoutes.js');
 const app = express();
 app.use(bodyParser.json());
 
-const corsOptions = {
-  origin: "https://food-finder-dwtt.onrender.com",
-  "Content-Type": "Authorization",
-  credentials: true,
-  optionSuccessStatus: 200,
-};
+// const corsOptions = {
+//   origin: "*"
+// };
 
-app.use(cors(corsOptions));
+app.use(cors());
 
 const password = encodeURIComponent("@Shakya123");
 
