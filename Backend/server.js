@@ -10,7 +10,7 @@ const app = express();
 app.use(bodyParser.json());
 
 const corsOptions = {
-  origin: "https://food-finder-frontend-afuz.onrender.com/"
+  origin: "*"
 };
 
 app.use(cors(corsOptions));
